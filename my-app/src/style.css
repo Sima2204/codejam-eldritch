@@ -86,6 +86,7 @@ body {
     border-color: rgb(227, 236, 236);
     color: rgb(72, 130, 182);
     cursor: pointer;
+    font-size: 16px;
 }
 
 .normal {
@@ -95,6 +96,7 @@ body {
     border-color: rgb(227, 236, 236);
     color: rgb(72, 130, 182);
     cursor: pointer;
+    font-size: 16px;
 }
 
 .hard {
@@ -104,6 +106,7 @@ body {
     border-color: rgb(227, 236, 236);
     color: rgb(72, 130, 182);
     cursor: pointer;
+    font-size: 16px;
 }
 
 .mix {
@@ -118,4 +121,67 @@ body {
     border-color: rgb(227, 236, 236);
     cursor: pointer;
     color: rgb(72, 130, 182);
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.stages_and_cards_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 30px;
+    gap: 100px;
+}
+
+.stages {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 50px;
+}
+
+.stage_title {
+    color: rgb(241, 229, 241);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stage_dots {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dot_green {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.dot_brown {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: brown;
+}
+
+.dot_blue {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.card_back {
+
+}
+
+.card_back_side {
+    background-size: cover;
+    height: 290px;
+    width: 190px;
 }

@@ -25,6 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 30px;
+    flex-wrap: wrap;
 }
 
 .image-1 {
@@ -68,9 +69,53 @@ body {
 }
 
 .difficulty {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.easy {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(42, 42, 82);
+    border-color: rgb(227, 236, 236);
+    color: rgb(72, 130, 182);
+    cursor: pointer;
+}
+
+.normal {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(42, 42, 82);
+    border-color: rgb(227, 236, 236);
+    color: rgb(72, 130, 182);
+    cursor: pointer;
+}
+
+.hard {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(42, 42, 82);
+    border-color: rgb(227, 236, 236);
+    color: rgb(72, 130, 182);
+    cursor: pointer;
+}
+
+.mix {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 30px;
+    margin: 0 auto; 
+    width: 200px;
+    height: 50px;
+    background-color: rgb(42, 42, 82);
+    border-color: rgb(227, 236, 236);
+    cursor: pointer;
+    color: rgb(72, 130, 182);
 }

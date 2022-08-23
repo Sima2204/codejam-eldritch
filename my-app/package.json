@@ -1,8 +1,8 @@
 {
-  "version": "0.0.1",
-  "description": "Eldritch Horror Codejam application",
+  "version": "0.1.0",
+  "description": "My new js application",
   "private": true,
-  "name": "Eldritch Horror Codejam",
+  "name": "my-app",
   "scripts": {
     "start": "rss-scripts start",
     "build": "rss-scripts build"

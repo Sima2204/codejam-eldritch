@@ -1,0 +1,13 @@
+{
+  "version": "0.0.1",
+  "description": "Eldritch Horror Codejam application",
+  "private": true,
+  "name": "Eldritch Horror Codejam",
+  "scripts": {
+    "start": "rss-scripts start",
+    "build": "rss-scripts build"
+  },
+  "devDependencies": {
+    "rss-scripts": "^0.2.4"
+  }
+}

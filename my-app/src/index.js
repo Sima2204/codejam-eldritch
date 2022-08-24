@@ -93,10 +93,9 @@ function shuffle(arr) {
 shuffle(firstStageCards);
 shuffle(secondStageCards);
 shuffle(thirdStageCards);
-
-console.log(firstStageCards);
-console.log(secondStageCards);
-console.log(thirdStageCards);
+// console.log(firstStageCards);
+// console.log(secondStageCards);
+// console.log(thirdStageCards);
 
 // собираем одну колоду
 

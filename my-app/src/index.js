@@ -14,7 +14,7 @@ let green = ancientsData[0].firstStage.greenCards + ancientsData[0].secondStage.
 let brown = ancientsData[0].firstStage.brownCards + ancientsData[0].secondStage.brownCards + ancientsData[0].thirdStage.brownCards;
 let blue = ancientsData[0].firstStage.blueCards + ancientsData[0].secondStage.blueCards + ancientsData[0].thirdStage.blueCards;
 
-// собрали все зеленые карты normal
+// собираем все зеленые карты normal
 let greenCardsNormalLevel = [];
 function collectGreenCards() {
   for (let i = 0; i < cardsDataGreen.length; i++) {
@@ -24,9 +24,9 @@ function collectGreenCards() {
   }
 }
 collectGreenCards();
-console.log(greenCardsNormalLevel);
+// console.log(greenCardsNormalLevel);
 
-// собрали все коричневые карты normal
+// собираем все коричневые карты normal
 let brownCardsNormalLevel = [];
 function collectBrownCards() {
   for (let i = 0; i < cardsDataBrown.length; i++) {
@@ -36,9 +36,9 @@ function collectBrownCards() {
   }
 }
 collectBrownCards();
-console.log(brownCardsNormalLevel);
+// console.log(brownCardsNormalLevel);
 
-// собрали все синие карты normal
+// собираем все синие карты normal
 let blueCardsNormalLevel = [];
 function collectBlueCards() {
   for (let i = 0; i < cardsDataBlue.length; i++) {
@@ -48,4 +48,58 @@ function collectBlueCards() {
   }
 }
 collectBlueCards();
-console.log(blueCardsNormalLevel);
+// console.log(blueCardsNormalLevel);
+
+// собираем карты на все три стейджа normal
+const shuffledGreen = greenCardsNormalLevel.sort(() => 0.5 - Math.random());
+let selectedGreen = shuffledGreen.slice(0, 5);
+// console.log(selectedGreen);
+
+const shuffledBlue = blueCardsNormalLevel.sort(() => 0.5 - Math.random());
+let selectedBlue = shuffledBlue.slice(0, 2);
+// console.log(selectedBlue);
+
+const shuffledBrown = brownCardsNormalLevel.sort(() => 0.5 - Math.random());
+let selectedBrown = shuffledBrown.slice(0, 9);
+// console.log(selectedBrown);
+
+// распределение по стейджам
+let firstStageCards = [];
+firstStageCards.push(selectedGreen[0]);
+firstStageCards.push(selectedBlue[0]);
+firstStageCards.push(selectedBrown[0]);
+firstStageCards.push(selectedBrown[1]);
+
+let secondStageCards = [];
+secondStageCards.push(selectedGreen[1]);
+secondStageCards.push(selectedGreen[2]);
+secondStageCards.push(selectedBlue[1]);
+secondStageCards.push(selectedBrown[2]);
+secondStageCards.push(selectedBrown[3]);
+secondStageCards.push(selectedBrown[4]);
+
+let thirdStageCards = [];
+thirdStageCards.push(selectedGreen[3]);
+thirdStageCards.push(selectedGreen[4]);
+thirdStageCards.push(selectedBrown[5]);
+thirdStageCards.push(selectedBrown[6]);
+thirdStageCards.push(selectedBrown[7]);
+thirdStageCards.push(selectedBrown[8]);
+
+// перемешиваем три колоды
+function shuffle(arr) {
+  arr.sort(() => Math.random() - 0.5);
+}
+shuffle(firstStageCards);
+shuffle(secondStageCards);
+shuffle(thirdStageCards);
+
+console.log(firstStageCards);
+console.log(secondStageCards);
+console.log(thirdStageCards);
+
+// собираем одну колоду
+
+
+
+

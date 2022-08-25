@@ -108,11 +108,14 @@ let finalCards = thirdStageCards.concat(secondStageCards, firstStageCards);
 console.log(finalCards);
 
 // достаем карты по очереди по одной и убираем из колоды
-function showCard(x) {
-  if (x.length != 0) {
-    console.log(x.pop());
+function showCard() {
+  if (finalCards.length != 0) {
+    let element = finalCards.pop();
+    console.log(element);
+  } else {
+    console.log('here are no more cards left')
   }
 }
 
 const cardBackSide = document.querySelector(".card_back_side");
-cardBackSide.addEventListener("click", showCard(finalCards));
+cardBackSide.addEventListener("click", showCard);

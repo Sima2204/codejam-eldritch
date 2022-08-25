@@ -152,6 +152,10 @@ body {
     color: aliceblue;
 }
 
+.card_back {
+    width: 190px;
+}
+
 .card_back_side {
     background-size: cover;
     height: 290px;

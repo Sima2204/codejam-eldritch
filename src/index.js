@@ -5,6 +5,11 @@ import { shuffle } from "./helper.js";
 
 const DIFFICULTY_LEVEL_NORMAL = 'normal';
 const AZATHOTH_INDEX = 0;
+// 1
+// 2
+// 3
+let monsterIndex = AZATHOTH_INDEX;
+// function getMonsterIndex, on card click we making index. And making monsterIndex = mosterIndex
 
 // добавляем цифры в счетчике
 const one = document.getElementById("1");
@@ -17,13 +22,13 @@ const seven = document.getElementById("7");
 const eight = document.getElementById("8");
 const nine = document.getElementById("9");
 
-setValues(ancientsData, AZATHOTH_INDEX);
+setValues(ancientsData, monsterIndex);
 
-const cardsQuantity = getCardsQuantity(ancientsData, AZATHOTH_INDEX);
+const cardsQuantity = getCardsQuantity(ancientsData, monsterIndex);
 
 const allCards = getAllCards(greenCards, blueCards, brownCards, DIFFICULTY_LEVEL_NORMAL, cardsQuantity);
 
-const finalCards = getFinalCards(allCards, ancientsData, AZATHOTH_INDEX);
+const finalCards = getFinalCards(allCards, ancientsData, monsterIndex);
 
 function getCardsQuantity(ancientsData, ancientIndex) {
   const cardsQuantity = [0, 0, 0];

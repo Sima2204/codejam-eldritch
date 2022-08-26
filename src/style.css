@@ -97,7 +97,8 @@ body {
     display: none;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 80px;
     flex-wrap: wrap;
 }
 
@@ -153,10 +154,12 @@ body {
 }
 
 .card_back {
+    height: 290px;
     width: 190px;
 }
 
 .card_back_side {
+    display: block;
     background-size: cover;
     height: 290px;
     width: 190px;

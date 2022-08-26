@@ -31,32 +31,67 @@ function getCardsByMonster(ancientsData, monsterIndex, difficulty, greenCards, b
     const allCards = getAllCards(greenCards, blueCards, brownCards, difficulty, cardsQuantity);
     finalCards = getFinalCards(allCards, ancientsData, monsterIndex);
     setValues(ancientsData, monsterIndex);
-    document.querySelector('.stages_and_cards_container').style.display = 'flex';
 }
 
 AZATHOTH.onclick = (event) => {
     event.target.classList.add('active');
+    CTHULHU.classList.remove('active');
+    IOGSOTHOTH.classList.remove('active');
+    SHUBNIGGURATH.classList.remove('active');
     getCardsByMonster(ancientsData, AZATHOTH_INDEX, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
+    document.querySelector('.difficulty').style.display = 'flex';
+    document.querySelector('.mix').style.display = 'none';
+    document.querySelector('.stages_and_cards_container').style.display = 'none';
+    document.querySelector('.card_opened_now').style.display = 'none';
 };
-CTHULHU.onclick = () =>
+CTHULHU.onclick = (event) => {
+    event.target.classList.add('active');
+    AZATHOTH.classList.remove('active');
+    IOGSOTHOTH.classList.remove('active');
+    SHUBNIGGURATH.classList.remove('active');
     getCardsByMonster(ancientsData, CTHULHU_INDEX, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
-IOGSOTHOTH.onclick = () =>
+    document.querySelector('.difficulty').style.display = 'flex';
+    document.querySelector('.mix').style.display = 'none';
+    document.querySelector('.stages_and_cards_container').style.display = 'none';
+    document.querySelector('.card_opened_now').style.display = 'none';
+};
+
+IOGSOTHOTH.onclick = (event) => {
+    event.target.classList.add('active');
+    AZATHOTH.classList.remove('active');
+    CTHULHU.classList.remove('active');
+    SHUBNIGGURATH.classList.remove('active');
     getCardsByMonster(ancientsData, IOGSOTHOTH_INDEX, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
-SHUBNIGGURATH.onclick = () =>
+    document.querySelector('.difficulty').style.display = 'flex';
+    document.querySelector('.mix').style.display = 'none';
+    document.querySelector('.stages_and_cards_container').style.display = 'none';
+    document.querySelector('.card_opened_now').style.display = 'none';
+};
+
+SHUBNIGGURATH.onclick = (event) => {
+    event.target.classList.add('active');
+    AZATHOTH.classList.remove('active');
+    CTHULHU.classList.remove('active');
+    IOGSOTHOTH.classList.remove('active');
     getCardsByMonster(ancientsData, SHUBNIGGURATH_INDEX, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
+    document.querySelector('.difficulty').style.display = 'flex';
+    document.querySelector('.mix').style.display = 'none';
+    document.querySelector('.stages_and_cards_container').style.display = 'none';
+    document.querySelector('.card_opened_now').style.display = 'none';
+};
 
-// document.querySelector('.normal').onclick = function(e) {
-//   document.querySelector('.mix').style.display = 'flex';
-// };
+document.querySelector('.normal').onclick = function(e) {
+  document.querySelector('.mix').style.display = 'flex';
+};
 
-// document.querySelector('.mix').onclick = function(e) {
-//   setValues(ancientsData, monsterIndex);
-//   document.querySelector('.stages_and_cards_container').style.display = 'flex';
-// };
+document.querySelector('.mix').onclick = function(e) {
+  document.querySelector('.stages_and_cards_container').style.display = 'flex';
+  document.querySelector('.card_back_side').style.display = 'block';
+};
 
-// document.querySelector('.card_back_side').onclick = function(e) {
-//   document.querySelector('.card_opened_now').style.display = 'block';
-// };
+document.querySelector('.card_back_side').onclick = function(e) {
+  document.querySelector('.card_opened_now').style.display = 'block';
+};
 
 // устанавливаем значения в стейдж
 function setValues(ancientsData, ancientIndex) {
@@ -93,7 +128,7 @@ function showCard() {
         }
     } else {
         backImage.style.display = 'none';
-        console.log('here are no more cards left');
+        console.log('GAME OVER! HERE ARE NO MORE CARDS LEFT!');
     }
 }
 

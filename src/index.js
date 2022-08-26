@@ -4,14 +4,14 @@ import { brownCards, blueCards, greenCards } from './data/mythicCards/index.js';
 import { getCardsQuantity, getAllCards, getFinalCards } from './helper.js';
 
 const DIFFICULTY_LEVEL_NORMAL = 'normal';
-const AZATHOTH = document.getElementById('first-monster');
-const CTHULHU = document.getElementById('second-monster');
-const IOGSOTHOTH = document.getElementById('third-monster');
-const SHUBNIGGURATH = document.getElementById('fourth-monster');
-const AZATHOTH_INDEX = 0;
-const CTHULHU_INDEX = 1;
-const IOGSOTHOTH_INDEX = 2;
-const SHUBNIGGURATH_INDEX = 3;
+const azathoth = document.getElementById('first-monster');
+const cthulhu = document.getElementById('second-monster');
+const iogSothoth = document.getElementById('third-monster');
+const shubNiggurath = document.getElementById('fourth-monster');
+const azathoth_index = 0;
+const cthulhu_index = 1;
+const iogSothoth_index = 2;
+const shubNiggurath_index = 3;
 let monsterIndex;
 let finalCards;
 
@@ -33,12 +33,12 @@ function getCardsByMonster(ancientsData, monsterIndex, difficulty, greenCards, b
     setValues(ancientsData, monsterIndex);
 };
 
-AZATHOTH.onclick = (event) => {
+azathoth.onclick = (event) => {
     event.target.classList.add('active');
-    CTHULHU.classList.remove('active');
-    IOGSOTHOTH.classList.remove('active');
-    SHUBNIGGURATH.classList.remove('active');
-    getCardsByMonster(ancientsData, AZATHOTH_INDEX, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
+    cthulhu.classList.remove('active');
+    iogSothoth.classList.remove('active');
+    shubNiggurath.classList.remove('active');
+    getCardsByMonster(ancientsData, azathoth_index, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
     document.querySelector('.difficulty').style.display = 'flex';
     document.querySelector('.mix').style.display = 'none';
     document.querySelector('.stages_and_cards_container').style.display = 'none';
@@ -47,12 +47,12 @@ AZATHOTH.onclick = (event) => {
     document.querySelector('.mix').classList.remove('active');
 };
 
-CTHULHU.onclick = (event) => {
+cthulhu.onclick = (event) => {
     event.target.classList.add('active');
-    AZATHOTH.classList.remove('active');
-    IOGSOTHOTH.classList.remove('active');
-    SHUBNIGGURATH.classList.remove('active');
-    getCardsByMonster(ancientsData, CTHULHU_INDEX, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
+    azathoth.classList.remove('active');
+    iogSothoth.classList.remove('active');
+    shubNiggurath.classList.remove('active');
+    getCardsByMonster(ancientsData, cthulhu_index, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
     document.querySelector('.difficulty').style.display = 'flex';
     document.querySelector('.mix').style.display = 'none';
     document.querySelector('.stages_and_cards_container').style.display = 'none';
@@ -61,12 +61,12 @@ CTHULHU.onclick = (event) => {
     document.querySelector('.mix').classList.remove('active');
 };
 
-IOGSOTHOTH.onclick = (event) => {
+iogSothoth.onclick = (event) => {
     event.target.classList.add('active');
-    AZATHOTH.classList.remove('active');
-    CTHULHU.classList.remove('active');
-    SHUBNIGGURATH.classList.remove('active');
-    getCardsByMonster(ancientsData, IOGSOTHOTH_INDEX, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
+    azathoth.classList.remove('active');
+    cthulhu.classList.remove('active');
+    shubNiggurath.classList.remove('active');
+    getCardsByMonster(ancientsData, iogSothoth_index, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
     document.querySelector('.difficulty').style.display = 'flex';
     document.querySelector('.mix').style.display = 'none';
     document.querySelector('.stages_and_cards_container').style.display = 'none';
@@ -75,12 +75,12 @@ IOGSOTHOTH.onclick = (event) => {
     document.querySelector('.mix').classList.remove('active');
 };
 
-SHUBNIGGURATH.onclick = (event) => {
+shubNiggurath.onclick = (event) => {
     event.target.classList.add('active');
-    AZATHOTH.classList.remove('active');
-    CTHULHU.classList.remove('active');
-    IOGSOTHOTH.classList.remove('active');
-    getCardsByMonster(ancientsData, SHUBNIGGURATH_INDEX, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
+    azathoth.classList.remove('active');
+    cthulhu.classList.remove('active');
+    iogSothoth.classList.remove('active');
+    getCardsByMonster(ancientsData, shubNiggurath_index, DIFFICULTY_LEVEL_NORMAL, greenCards, blueCards, brownCards);
     document.querySelector('.difficulty').style.display = 'flex';
     document.querySelector('.mix').style.display = 'none';
     document.querySelector('.stages_and_cards_container').style.display = 'none';

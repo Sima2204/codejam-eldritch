@@ -31,7 +31,7 @@ function getCardsByMonster(ancientsData, monsterIndex, difficulty, greenCards, b
     const allCards = getAllCards(greenCards, blueCards, brownCards, difficulty, cardsQuantity);
     finalCards = getFinalCards(allCards, ancientsData, monsterIndex);
     setValues(ancientsData, monsterIndex);
-}
+};
 
 AZATHOTH.onclick = (event) => {
     event.target.classList.add('active');
@@ -43,7 +43,10 @@ AZATHOTH.onclick = (event) => {
     document.querySelector('.mix').style.display = 'none';
     document.querySelector('.stages_and_cards_container').style.display = 'none';
     document.querySelector('.card_opened_now').style.display = 'none';
+    document.querySelector('.normal').classList.remove('active');
+    document.querySelector('.mix').classList.remove('active');
 };
+
 CTHULHU.onclick = (event) => {
     event.target.classList.add('active');
     AZATHOTH.classList.remove('active');
@@ -54,6 +57,8 @@ CTHULHU.onclick = (event) => {
     document.querySelector('.mix').style.display = 'none';
     document.querySelector('.stages_and_cards_container').style.display = 'none';
     document.querySelector('.card_opened_now').style.display = 'none';
+    document.querySelector('.normal').classList.remove('active');
+    document.querySelector('.mix').classList.remove('active');
 };
 
 IOGSOTHOTH.onclick = (event) => {
@@ -66,6 +71,8 @@ IOGSOTHOTH.onclick = (event) => {
     document.querySelector('.mix').style.display = 'none';
     document.querySelector('.stages_and_cards_container').style.display = 'none';
     document.querySelector('.card_opened_now').style.display = 'none';
+    document.querySelector('.normal').classList.remove('active');
+    document.querySelector('.mix').classList.remove('active');
 };
 
 SHUBNIGGURATH.onclick = (event) => {
@@ -78,15 +85,19 @@ SHUBNIGGURATH.onclick = (event) => {
     document.querySelector('.mix').style.display = 'none';
     document.querySelector('.stages_and_cards_container').style.display = 'none';
     document.querySelector('.card_opened_now').style.display = 'none';
+    document.querySelector('.normal').classList.remove('active');
+    document.querySelector('.mix').classList.remove('active');
 };
 
 document.querySelector('.normal').onclick = function(e) {
   document.querySelector('.mix').style.display = 'flex';
+  document.querySelector('.normal').classList.add('active');
 };
 
 document.querySelector('.mix').onclick = function(e) {
   document.querySelector('.stages_and_cards_container').style.display = 'flex';
   document.querySelector('.card_back_side').style.display = 'block';
+  document.querySelector('.mix').classList.add('active');
 };
 
 document.querySelector('.card_back_side').onclick = function(e) {
@@ -104,7 +115,7 @@ function setValues(ancientsData, ancientIndex) {
     seven.innerHTML = ancientsData[ancientIndex].thirdStage.greenCards;
     eight.innerHTML = ancientsData[ancientIndex].thirdStage.blueCards;
     nine.innerHTML = ancientsData[ancientIndex].thirdStage.brownCards;
-}
+};
 
 // достаем карты по очереди по одной, убираем из колоды, отнимаем число
 function showCard() {
@@ -125,12 +136,14 @@ function showCard() {
             delValues(two, five, eight);
         } else if (element.id.includes('brown')) {
             delValues(three, six, nine);
+        } 
+        
+        if (!finalCards.length) {
+            backImage.style.display = 'none';
+            console.log('GAME OVER! HERE ARE NO MORE CARDS LEFT!');
         }
-    } else {
-        backImage.style.display = 'none';
-        console.log('GAME OVER! HERE ARE NO MORE CARDS LEFT!');
-    }
-}
+    } 
+};
 
 const cardBackSide = document.querySelector('.card_back_side');
 cardBackSide.addEventListener('click', showCard);
@@ -144,4 +157,4 @@ function delValues(green, blue, brown) {
     } else {
         brown.innerHTML -= 1;
     }
-}
+};

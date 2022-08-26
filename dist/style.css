@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    overflow-x:hidden;
+}
+
+.background {
+    background: url(/assets/home.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ancients {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.ancients_images {
+    cursor: pointer;
+    height: 360px;
+    width: 300px;
+}
+
+.active {
+    border: 5px solid brown;
+}
+
+.difficulty {
+    width: 500px;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.easy {
+    display: none;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(42, 42, 82);
+    color: rgb(72, 130, 182);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.normal {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(42, 42, 82);
+    color: rgb(72, 130, 182);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.hard {
+    display: none;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(42, 42, 82);
+    color: rgb(72, 130, 182);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.mix {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+    width: 200px;
+    height: 50px;
+    background-color: rgb(42, 42, 82);
+    cursor: pointer;
+    color: rgb(72, 130, 182);
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.stages_and_cards_container {
+    max-width: 800px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.stages {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 50px;
+}
+
+.stage_title {
+    color: rgb(241, 229, 241);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stage_dots {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.dot_green {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: green;
+    text-align: center;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.dot_brown {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: brown;
+    text-align: center;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.dot_blue {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: blue;
+    text-align: center;
+    font-size: 30px;
+    color: aliceblue;
+}
+
+.card_back {
+    height: 290px;
+    width: 190px;
+}
+
+.card_back_side {
+    display: block;
+    background-size: cover;
+    height: 290px;
+    width: 190px;
+}
+
+.card_opened_now {
+    display: none;
+    background-size: cover;
+    height: 290px;
+    width: 190px;
+}

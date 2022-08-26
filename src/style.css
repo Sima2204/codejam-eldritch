@@ -42,7 +42,7 @@ body {
     width: 500px;
     display: none;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -51,6 +51,7 @@ body {
 }
 
 .easy {
+    display: none;
     width: 100px;
     height: 30px;
     background-color: rgb(42, 42, 82);
@@ -69,6 +70,7 @@ body {
 }
 
 .hard {
+    display: none;
     width: 100px;
     height: 30px;
     background-color: rgb(42, 42, 82);

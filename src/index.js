@@ -1,7 +1,7 @@
 import ancientsData from './data/ancients.js';
 import difficulties from './data/difficulties.js';
 import { brownCards, blueCards, greenCards } from './data/mythicCards/index.js';
-import { getCardsQuantity, getAllCards, getFinalCards } from '';
+import { getCardsQuantity, getAllCards, getFinalCards } from './helper.js';
 
 const DIFFICULTY_LEVEL_NORMAL = 'normal';
 const azathoth = document.getElementById('first-monster');
